@@ -1,0 +1,920 @@
+{
+    "last_updated": 1789991348,
+    "ttl": 60,
+    "data": {
+        "stations": [
+            {
+                "station_id": "5501",
+                "name": "République",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.678037,
+                "lat": 48.110026,
+                "address": "19 Quai Lamartine",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 45
+            },
+            {
+                "station_id": "5502",
+                "name": "Mairie - Opéra",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.678757,
+                "lat": 48.111624,
+                "address": "11 galeries du Théâtre",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5504",
+                "name": "Place Hoche",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.677073,
+                "lat": 48.115074,
+                "address": "12 place Hoche",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 39
+            },
+            {
+                "station_id": "5505",
+                "name": "Sainte-Anne",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.680534,
+                "lat": 48.114219,
+                "address": "14 place Sainte-Anne",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5506",
+                "name": "Hôtel Dieu",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.677849,
+                "lat": 48.117596,
+                "address": "2 Rue de la Cochardière",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 26
+            },
+            {
+                "station_id": "5507",
+                "name": "Jules Ferry",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.670688,
+                "lat": 48.118064,
+                "address": "28 avenue Doyen Roger Houin",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 31
+            },
+            {
+                "station_id": "5509",
+                "name": "Saint-Georges Piscine",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.674417,
+                "lat": 48.112385,
+                "address": "21 rue Victor Hugo",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 18
+            },
+            {
+                "station_id": "5510",
+                "name": "Musée Beaux-Arts",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.67408,
+                "lat": 48.109601,
+                "address": "3 Avenue Jean Janvier",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 16
+            },
+            {
+                "station_id": "5512",
+                "name": "TNB",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.673711,
+                "lat": 48.107748,
+                "address": "1 Square de Kergus",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 28
+            },
+            {
+                "station_id": "5514",
+                "name": "Bonnets Rouges",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.665814,
+                "lat": 48.106846,
+                "address": "11 boulevard René Laënnec",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5516",
+                "name": "Champs Libres",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.674328,
+                "lat": 48.105538,
+                "address": "7 Cours des Alliés",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5517",
+                "name": "Charles de Gaulle",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.677119,
+                "lat": 48.105111,
+                "address": "2 Cours des Alliés",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5519",
+                "name": "Colombier",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.680454,
+                "lat": 48.106045,
+                "address": "6 rue de Plélo",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5520",
+                "name": "Pont de Nantes",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.684015,
+                "lat": 48.102015,
+                "address": "32 Rue du Docteur Francis Joly",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5522",
+                "name": "Oberthur",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.661853,
+                "lat": 48.11355,
+                "address": "4 Rue Gutenberg",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 30
+            },
+            {
+                "station_id": "5523",
+                "name": "La Rotonde",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.68677,
+                "lat": 48.106653,
+                "address": "2 rue de Redon",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5524",
+                "name": "Place de Bretagne",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.684041,
+                "lat": 48.1097,
+                "address": "3 Place de Bretagne",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 39
+            },
+            {
+                "station_id": "5526",
+                "name": "Les Lices",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.685037,
+                "lat": 48.112766,
+                "address": "9 Rue de Juillet",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 25
+            },
+            {
+                "station_id": "5527",
+                "name": "Horizons",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.689758,
+                "lat": 48.111545,
+                "address": "15 rue Yves Mayeuc",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5528",
+                "name": "Chèques Postaux",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.693397,
+                "lat": 48.108789,
+                "address": "66 mail François Mitterrand",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 30
+            },
+            {
+                "station_id": "5533",
+                "name": "Anatole France",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.688545,
+                "lat": 48.118175,
+                "address": "19 avenue du 41ème Régiment d'Infanterie",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 28
+            },
+            {
+                "station_id": "5534",
+                "name": "Brest Verdun",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.693283,
+                "lat": 48.112952,
+                "address": "2 boulevard de Verdun",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5535",
+                "name": "Pont de Châteaudun",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.664454,
+                "lat": 48.11026,
+                "address": "69 avenue Aristide Briand",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5536",
+                "name": "Paul Bert",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.670039,
+                "lat": 48.110115,
+                "address": "9 Avenue Aristide Briand",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 16
+            },
+            {
+                "station_id": "5537",
+                "name": "Auberge de Jeunesse",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.681876,
+                "lat": 48.120876,
+                "address": "83 rue de Saint-Malo",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 29
+            },
+            {
+                "station_id": "5538",
+                "name": "Marbeuf",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.702375,
+                "lat": 48.111825,
+                "address": "34 boulevard Marbeuf",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5539",
+                "name": "Pontchaillou",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.692737,
+                "lat": 48.121481,
+                "address": "49 rue Antoine Joly",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 28
+            },
+            {
+                "station_id": "5540",
+                "name": "Croix Saint-Hélier",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.662078,
+                "lat": 48.103044,
+                "address": "13 mail Louise Bourgeois",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5542",
+                "name": "Robidou",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.659376,
+                "lat": 48.109924,
+                "address": "124 avenue Sergent Maginot",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5543",
+                "name": "Cité Judiciaire",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.68411,
+                "lat": 48.104771,
+                "address": "20 Rue du Papier Timbré",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5544",
+                "name": "Metz - Sévigné",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.658258,
+                "lat": 48.115993,
+                "address": "28 Boulevard de Metz",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 16
+            },
+            {
+                "station_id": "5546",
+                "name": "Plaine de Baud",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.643696,
+                "lat": 48.112508,
+                "address": "67 avenue François Château",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5547",
+                "name": "Beaulieu Chimie",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.633875,
+                "lat": 48.116458,
+                "address": "Allée de Beaulieu",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 30
+            },
+            {
+                "station_id": "5548",
+                "name": "Beaulieu - Université",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.639922,
+                "lat": 48.121926,
+                "address": "39 avenue Professeur Charles Foulon",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 30
+            },
+            {
+                "station_id": "5552",
+                "name": "Villejean-Université",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.70428,
+                "lat": 48.121074,
+                "address": "1 place Recteur Henri Le Moal",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 26
+            },
+            {
+                "station_id": "5555",
+                "name": "Département 35",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.694032,
+                "lat": 48.128453,
+                "address": "1 rue Jacques Léonard",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 27
+            },
+            {
+                "station_id": "5556",
+                "name": "Berger",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.705097,
+                "lat": 48.116314,
+                "address": "1 Avenue Gaston Berger",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 14
+            },
+            {
+                "station_id": "5560",
+                "name": "Cucillé - Frac",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.698129,
+                "lat": 48.128788,
+                "address": "12 bis avenue de Cucillé",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 25
+            },
+            {
+                "station_id": "5561",
+                "name": "Jacques Cartier",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.674729,
+                "lat": 48.097546,
+                "address": "19 place Thérèse Pierre",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5562",
+                "name": "Clemenceau",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.674116,
+                "lat": 48.093292,
+                "address": "1 Avenue Henri Fréville",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 22
+            },
+            {
+                "station_id": "5566",
+                "name": "Bréquigny Piscine",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.69034,
+                "lat": 48.089986,
+                "address": "13 boulevard Albert 1er",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5567",
+                "name": "Binquenais",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.667321,
+                "lat": 48.091594,
+                "address": "24 Rue André Rouault",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 16
+            },
+            {
+                "station_id": "5569",
+                "name": "Champs Manceaux",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.682284,
+                "lat": 48.091114,
+                "address": "14 Rue Louis et René Moine",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 18
+            },
+            {
+                "station_id": "5571",
+                "name": "Sainte-Thérèse",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.663731,
+                "lat": 48.094986,
+                "address": "76 Boulevard Emile Combes",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 12
+            },
+            {
+                "station_id": "5578",
+                "name": "Gros-Chêne",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.664806,
+                "lat": 48.125408,
+                "address": "boulevard Emmanuel Mounier",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 18
+            },
+            {
+                "station_id": "5579",
+                "name": "Les Gayeulles",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.657528,
+                "lat": 48.129454,
+                "address": "11 rue Marcel Brossier",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 30
+            },
+            {
+                "station_id": "5580",
+                "name": "Painlevé",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.659762,
+                "lat": 48.123463,
+                "address": "158 rue de Fougères",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 29
+            },
+            {
+                "station_id": "5581",
+                "name": "Joliot-Curie - Chateaubriand",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.651262,
+                "lat": 48.124465,
+                "address": "1 rue du Professeur Pierre Poumier",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 30
+            },
+            {
+                "station_id": "5582",
+                "name": "La Poterie",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.643683,
+                "lat": 48.087309,
+                "address": "211 rue de Vern",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5585",
+                "name": "La Courrouze",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.694512,
+                "lat": 48.099043,
+                "address": "Rue Claude Bernard",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5586",
+                "name": "Armorique",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.676108,
+                "lat": 48.129912,
+                "address": "13 rue de la Taurellerie",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5587",
+                "name": "Pont de Strasbourg",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.655892,
+                "lat": 48.109834,
+                "address": "94 rue Alphonse Guérin",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 20
+            },
+            {
+                "station_id": "5588",
+                "name": "Gare Sud Féval",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.673928,
+                "lat": 48.102065,
+                "address": "9 C rue de Châtillon",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5589",
+                "name": "Baud Chardonnet",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.647793,
+                "lat": 48.109925,
+                "address": "4 rue Georges Charpak",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5590",
+                "name": "Bourgeois",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.655278,
+                "lat": 48.098086,
+                "address": "2 boulevard Léon Bourgeois",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 24
+            },
+            {
+                "station_id": "5591",
+                "name": "Mabilais",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.693098,
+                "lat": 48.105108,
+                "address": "50 rue de Redon",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 25
+            },
+            {
+                "station_id": "5592",
+                "name": "Gares",
+                "region_id": "region_rennes_metropole_35238",
+                "lon": -1.673233,
+                "lat": 48.104097,
+                "address": "1 place de la Gare",
+                "post_code": "35238",
+                "rental_methods": [
+                    "KEY",
+                    "ANDROIDPAY",
+                    "PHONE",
+                    "CREDITCARD"
+                ],
+                "capacity": 50
+            }
+        ]
+    }
+}

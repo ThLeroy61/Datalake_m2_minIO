@@ -1,0 +1,219 @@
+# docker-compose.yaml
+#
+# Ce fichier décrit toute notre plateforme Data Lake locale.
+#
+# Nous allons démarrer plusieurs services :
+#   1. minio      -> stockage objet / Data Lake
+#   2. minio-init -> création automatique du bucket
+#   3. airflow    -> orchestration du pipeline
+#   4. jupyter    -> analyse des données
+#
+# Docker Compose crée également un réseau interne :
+#
+# Airflow  ──────> MinIO
+# Jupyter  ──────> MinIO
+#
+# Les services peuvent donc communiquer entre eux en utilisant
+# leur nom de service (exemple : <http://minio:9000>).
+
+services:
+
+  # ============================================================
+  # 1. MINIO
+  # ============================================================
+  # MinIO joue le rôle de notre stockage objet compatible S3.
+  # C'est lui qui contient les fichiers de notre Data Lake.
+  minio:
+
+    # On utilise une version FIXÉE de l'image.
+    # Nous évitons volontairement "latest" afin que tous les
+    # étudiants utilisent la même version du logiciel.
+    #
+    # Image tirée de quay.io (registre officiel de l'éditeur MinIO) :
+    # Docker Hub a retiré l'organisation "minio" début septembre 2026,
+    # quay.io reste la source de distribution officielle et gratuite.
+    image: quay.io/minio/minio:RELEASE.2025-02-28T09-55-16Z
+
+    # Démarre le serveur MinIO.
+    #
+    # /data              -> emplacement des objets
+    # --console-address  -> interface Web d'administration
+    command: server /data --console-address ":9001"
+
+    # Les valeurs réelles sont stockées dans le fichier .env.
+    # Elles ne sont donc pas écrites directement dans le YAML.
+    env_file:
+      - .env
+
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+
+    # Correspondance entre les ports de notre ordinateur
+    # et ceux du conteneur.
+    #
+    # localhost:9000 -> API S3 MinIO
+    # localhost:9001 -> console Web MinIO
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
+    # Persistance des données.
+    #
+    # Le volume "minio_data" est monté dans /data.
+    # Si le conteneur MinIO est recréé, les données du Data Lake
+    # restent présentes dans le volume.
+    volumes:
+      - minio_data:/data
+
+    # Docker vérifie que MinIO est prêt avant de considérer
+    # le service comme opérationnel.
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+
+  # ============================================================
+  # 2. INITIALISATION DE MINIO
+  # ============================================================
+  # Ce petit conteneur ne fait pas partie du Data Lake lui-même.
+  # Il sert uniquement à effectuer une opération d'initialisation :
+  # créer automatiquement le bucket "transport-datalake".
+  #
+  # Cela évite de créer le bucket
+  # manuellement dans l'interface MinIO.
+  minio-init:
+
+    # Même registre que minio ci-dessus, pour la même raison.
+    # NB : le tag de "mc" n'est pas forcément le même que celui de
+    # "minio" sur quay.io -- ce sont deux images distinctes, publiées
+    # à des dates différentes.
+    image: quay.io/minio/mc:RELEASE.2025-08-13T08-35-41Z
+
+    # On attend que le service MinIO soit réellement healthy.
+    depends_on:
+      minio:
+        condition: service_healthy
+
+    env_file:
+      - .env
+
+    # "mc" est le client en ligne de commande de MinIO.
+    # Nous :
+    #   1. configurons un alias "local"
+    #   2. créons le bucket s'il n'existe pas
+    #   3. terminons le conteneur
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set local <http://minio:9000> $${MINIO_ROOT_USER} $${MINIO_ROOT_PASSWORD} &&
+      mc mb --ignore-existing local/$${MINIO_BUCKET} &&
+      echo 'Bucket prêt.' &&
+      exit 0
+      "
+
+
+  # ============================================================
+  # 3. AIRFLOW
+  # ============================================================
+  # Airflow est l'orchestrateur.
+  #
+  # Son rôle n'est pas de stocker les données.
+  # Son rôle est de déclencher et superviser notre pipeline.
+  airflow:
+
+    # Version volontairement fixée.
+    image: apache/airflow:2.9.3
+
+    # Mode "standalone" :
+    # pratique pour notre environnement pédagogique local.
+    command: standalone
+
+    environment:
+
+      # Nous ne voulons pas charger les DAGs d'exemple.
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+
+      # Bibliothèques Python nécessaires à notre pipeline.
+      #
+      # pandas  -> manipulation des données
+      # pyarrow -> écriture Parquet
+      # requests -> appel de l'API GBFS
+      # boto3 -> communication avec MinIO via l'API S3
+      _PIP_ADDITIONAL_REQUIREMENTS: "pandas pyarrow requests boto3"
+
+      # Paramètres permettant au DAG de communiquer avec MinIO.
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+
+    # Interface Web Airflow :
+    #
+    # localhost:8080 -> Airflow
+    ports:
+      - "8080:8080"
+
+    # Le dossier local ./dags est monté dans le conteneur.
+    #
+    # Cela permet à Airflow de voir les DAGs que vous écrivez
+    # directement sur votre ordinateur.
+    volumes:
+      - ./dags:/opt/airflow/dags
+
+    # Airflow démarre après l'initialisation de MinIO.
+    depends_on:
+      minio-init:
+        condition: service_completed_successfully
+
+
+  # ============================================================
+  # 4. JUPYTER
+  # ============================================================
+  # Jupyter constitue notre environnement d'exploration et
+  # d'analyse Python.
+  jupyter:
+
+    # Version fixée pour obtenir un environnement identique
+    # entre les étudiants.
+    image: quay.io/jupyter/scipy-notebook:2025-02-03
+
+    # Démarre Jupyter Notebook.
+    #
+    # Pour ce Lab local uniquement, nous désactivons le token
+    # afin de simplifier l'accès pédagogique.
+    command: start-notebook.sh --NotebookApp.token=''
+
+    # localhost:8888 -> Jupyter
+    ports:
+      - "8888:8888"
+
+    # Le dossier local ./notebooks est accessible dans Jupyter.
+    volumes:
+      - ./notebooks:/home/jovyan/work
+
+    # Jupyter doit pouvoir communiquer avec MinIO.
+    depends_on:
+      minio-init:
+        condition: service_completed_successfully
+
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+
+
+# ==============================================================
+# VOLUME DOCKER
+# ==============================================================
+# Ce volume est persistant.
+#
+# Il est utilisé par MinIO pour conserver les données du Data Lake.
+#
+# Sans volume :
+#   suppression du conteneur -> risque de perte des données
+#
+# Avec volume :
+#   suppression/recréation du conteneur -> données conservées
+volumes:
+  minio_data:
