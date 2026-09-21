@@ -2,6 +2,8 @@ from datetime import datetime, timezone, timedelta
 import io
 import os
 
+from zoneinfo import ZoneInfo
+
 import pandas as pd
 import requests
 import boto3
@@ -110,7 +112,9 @@ def velostar_to_minio():
         # ----------------------------------------------------
         # Étape 5 : horodatage de l'ingestion
         # ----------------------------------------------------
-        ingested_at = datetime.now(timezone.utc)
+
+        paris_tz = ZoneInfo("Europe/Paris")
+        ingested_at = datetime.now(paris_tz)
 
         df["ingested_at"] = ingested_at.isoformat()
 
